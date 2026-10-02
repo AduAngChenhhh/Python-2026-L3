@@ -7,18 +7,21 @@ Original file is located at
     https://colab.research.google.com/drive/1a855iN7BPujYKUoV4M3o73u6XzBhNYkr
 """
 
+#Ex 1
 r = float(input("Enter circle radius? "))
 
 area = 3.14 * r * r
 
 print("Circle area =", area)
 
+#Ex 2
 c = float(input("Enter the temperature in Celsius? "))
 
 f = c * 9 / 5 + 32
 
 print(c, "(C) =", f, "(F)")
 
+#Ex 3
 n = int(input("Enter a number? "))
 
 prime = True
@@ -36,6 +39,7 @@ if prime:
 else:
     print(n, "is a NOT prime number")
 
+#Ex4
 n = int(input("Enter a number? "))
 
 found = False
@@ -64,6 +68,7 @@ if found:
 else:
     print(n, "is NOT a perfect number")
 
+#Ex 5
 colors = ["Blue", "Yellow", "Red", "Black"]
 
 color = input("What is your favorite color? ")
@@ -74,6 +79,7 @@ if color in colors:
 else:
     print("Sorry, I could not find your color")
 
+#Ex 6
 range1 = range(0, 7)
 range2 = range(1, 11, 3)
 range3 = range(5, 0, -1)
@@ -84,6 +90,7 @@ print(list(range2))
 print(list(range3))
 print(list(range4))
 
+#Ex 7
 def remove_dollar_sign(s):
     return s.replace("$", "")
 
@@ -91,9 +98,11 @@ s = input("Enter a string: ")
 
 print(remove_dollar_sign(s))
 
+#Ex 8
 numbers = ["1","3","4","6","11","14"]
 V
 
+#Ex 9
 def extract_even(l):
     result = []
 
@@ -107,6 +116,7 @@ l = [0, 34, 23, 100, 999]
 
 print(extract_even(l))
 
+#Ex 10
 def factorial(n):
     result = -1
 
@@ -119,6 +129,7 @@ n = int(input("Enter a number: "))
 
 print(factorial(n))
 
+#Ex 11
 def divisors(n):
     result = []
 
@@ -132,9 +143,11 @@ n = int(input("Enter a number: "))
 
 print(divisors(n))
 
+#Ex 12
 x1, y1, x2, y2 = map(float, input().split())
 
 print(((x2-x1)**2 + (y2-y1)**2)**0.5)
 
+#Ex 13
 m, n = map(int, input().split())
  print("\n".join("* " * n if i == 0 or i == m-1 else "* " + "  " * (n-2) + "*" for i in range(m)))
