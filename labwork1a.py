@@ -147,7 +147,3 @@ print(divisors(n))
 x1, y1, x2, y2 = map(float, input().split())
 
 print(((x2-x1)**2 + (y2-y1)**2)**0.5)
-
-#Ex 13
-m, n = map(int, input().split())
- print("\n".join("* " * n if i == 0 or i == m-1 else "* " + "  " * (n-2) + "*" for i in range(m)))
