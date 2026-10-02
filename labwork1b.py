@@ -35,7 +35,12 @@ def add_courses():
 def add_marks():
     course = input("Course ID: ")
 
-    marks[course] = {}
+    if course not in courses:
+        print("This course doesn't exist. Please choose again!")
+        return
+
+    if course not in marks:
+        marks[course] = {}
 
     for id in students:
         mark = input("Mark for " + students[id][0] + ": ")
@@ -53,12 +58,23 @@ def show_courses():
 
 
 def show_marks():
-    course = input("Course ID: ")
+    while True:
+        course = input("Course ID: ")
 
-    print("Course:", courses[course])
+        if course not in courses:
+            print("This course doesn't exist. Please choose again!")
+            continue
 
-    for id in marks[course]:
-        print(students[id][0], ":", marks[course][id])
+        if course not in marks:
+            print("This course hasn't been marked yet. Please choose again!")
+            continue
+
+        print("Course:", courses[course])
+
+        for id in marks[course]:
+            print(students[id][0], ":", marks[course][id])
+
+        break
 
 
 while True:
@@ -92,3 +108,17 @@ while True:
 
     elif choice == "0":
         break
+
+    else:
+        print("Invalid choice.")
+def show_marks():
+    while True:
+        course = input("Course ID: ")
+
+        if course not in courses:
+            print("This course doesn't exist. Please choose again!")
+            continue
+
+        if course not in marks:
+            print("This course hasn't been marked yet. Please choose again!")
+            continue
